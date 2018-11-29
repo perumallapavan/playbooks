@@ -1,0 +1,17 @@
+#Example of Tomcat Installation
+---
+- hosts: dbserver.com
+  user: root
+  sudo: yes
+  gather_facts: yes
+  tasks:
+   - name: Remove older version of tomcat
+     file: path=/usr/local/tomcat state=absent
+   - name: Download Tomcat
+     get_url: url=http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz dest=/tmp
+   - name: Copy tomcat folder
+     command:  mkdir /usr/local/tomcat
+   - name: Extract archive
+     unarchive: src=/tmp/apache-tomcat-8.5.35.tar.gz dest=/usr/local/tomcat copy=no
+   - name: Start Tomcat
+     command: nohup  /usr/local/tomcat/apache-tomcat-8.5.35/bin/startup.sh &

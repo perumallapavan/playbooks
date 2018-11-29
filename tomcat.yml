@@ -4,7 +4,7 @@
   user:root
   sudo:yes
   gather_facts:yes
-  tasks:
+tasks:
   - name: Download Tomcat
     get_url: url=http://redrockdigimark.com/apachemirror/tomcat/tomcat-7/v7.0.78/bin/apache-tomcat-7.0.78.tar.gz dest=/tmp
    - name: Copy tomcat folder

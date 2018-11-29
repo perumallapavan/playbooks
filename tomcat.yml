@@ -2,8 +2,8 @@
 ---
 - hosts:dbserver.com
   user:root
-  sudo: yes
-  gather_facts: yes
+  sudo:yes
+  gather_facts:yes
   tasks:
    - name: Remove older version of tomcat
      file: path=/usr/local/tomcat state=absent

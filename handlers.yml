@@ -1,5 +1,5 @@
 ---
-- hosts: allservers
+- hosts: 192.168.132.152
   user: root
   sudo: yes
   tasks: 

@@ -1,5 +1,5 @@
 ---
-- hosts: dbserver.com
+- hosts: allservers
   user: root
   sudo: yes
   tasks: 

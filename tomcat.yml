@@ -1,6 +1,6 @@
 #Example of Tomcat Installation
 ---
-- hosts: dbserver.com
+- hosts: 192.168.132.152
   user: root
   sudo: yes
   gather_facts: yes

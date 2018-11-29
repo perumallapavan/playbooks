@@ -1,7 +1,7 @@
 #Example of Tomcat Installation
 ---
 - hosts:dbserver.com
-  user: test
+  user: root
   sudo: yes
   gather_facts: yes
   tasks:

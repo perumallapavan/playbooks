@@ -1,6 +1,5 @@
 - hosts: dbserver.com
   user:root
-  sudo:yes
   gather_facts:yes
   tasks
   - name Download Tomcat
